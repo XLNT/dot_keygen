@@ -1,6 +1,6 @@
 name: dot_keygen
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
+description: arbitrary hierarchical keygen
+version: 0.0.1
 homepage: https://github.com/XLNT/dot_keygen
 author: Matt Condon (shrugs) <matt@bydot.app>
 
@@ -10,6 +10,7 @@ environment:
 dependencies:
   bitcoin_flutter: ^1.0.7
   web3dart: ^1.1.1+1
+  pointycastle: ^1.0.1
 
 dev_dependencies:
   pedantic: ^1.8.0
