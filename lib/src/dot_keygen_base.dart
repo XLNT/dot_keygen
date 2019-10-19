@@ -1,13 +1,10 @@
-import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:bitcoin_flutter/bitcoin_flutter.dart' as bitcoin;
 import 'package:web3dart/web3dart.dart' as web3;
-import 'package:urbit_ob/urbit_ob.dart' as ob;
 
 import 'package:pointycastle/api.dart';
-import 'package:pointycastle/src/utils.dart';
 import 'package:pointycastle/digests/sha256.dart';
 import 'package:pointycastle/key_derivators/api.dart';
 import 'package:pointycastle/key_derivators/scrypt.dart';
@@ -46,4 +43,4 @@ bitcoin.HDWallet toBitcoinWallet(Uint8List secret) =>
     bitcoin.HDWallet.fromSeed(SHA256Digest().process(secret));
 
 web3.Wallet toEthereumWallet(Uint8List secret) =>
-    web3.Wallet.createNew(web3.EthPrivateKey(secret), "", Random.secure());
+    web3.Wallet.createNew(web3.EthPrivateKey(SHA256Digest().process(secret)), "", Random.secure());

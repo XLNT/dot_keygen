@@ -3,7 +3,6 @@ import 'dart:typed_data';
 
 import 'package:test/test.dart';
 import 'package:urbit_ob/urbit_ob.dart' as ob;
-import 'package:pointycastle/src/utils.dart';
 
 import 'package:dot_keygen/dot_keygen.dart' as keygen;
 import 'package:web3dart/credentials.dart';
